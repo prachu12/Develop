@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="angular.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="angular.js"></script>
+</head>
+<body>
+    <!-- <div class="content">
+        <form name="contact" novalidate>
+            <input type="text" placeholder="name" name="name" ng-model="contact.name"
+            ng-required="true" />
+            <div ng-show="contactForm.name.$touched && contactForm.name.$invalid">
+                <small style="color:red; display:block; text-align:center;">Enter a valid name</small>
+            </div>
+            <input type="text" placeholder="Email" name="name" ng-model="contact.email"
+            ng-required="true" />
+            <div ng-show="contactForm.email.$touched && contactForm.email.$invalid">
+                <small style="color:red; display:block; text-align:center;">Enter a valid name</small>
+            </div>
+            <textarea placeholder="Your Message" name="message" ng-model="contact.message"
+             ng-required="true" ></textarea><br>
+             <input type="submit" value="Send" ng-disabled="contactForm.$invalid"/>
+        </form>
+    </div> -->
+    <div class="main" ng-app="myApp" ng-controller="myCtrl">
+        <h1>Item's List</h1>
+        <div class="addItem">
+            <input ng-model="newItem" placeholder="Add Item" class="addText">
+            <button ng-click="pushItem()">Add</button>
+        </div>
+        <ul>
+            <li ng-repeat="i in items">
+                {{i}}
+            <span ng-click="deleteItem($index)">X</span>
+        </li>
+        </ul>
+    </div>
+    
+</body>
+</html>
